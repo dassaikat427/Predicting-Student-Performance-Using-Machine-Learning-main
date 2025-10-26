@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h2 class="mb-4">Predict Final Grade for a Student</h2>
+
+<form method="POST" action="/predict" class="row g-3">
+    <div class="col-md-2">
+        <input class="form-control" name="gender" placeholder="Gender (M/F)" required>
+    </div>
+    <div class="col-md-1">
+        <input class="form-control" name="age" placeholder="Age" type="number" required>
+    </div>
+    <div class="col-md-2">
+        <input class="form-control" name="study_time" placeholder="Study Time (hrs)" type="number" required>
+    </div>
+    <div class="col-md-2">
+        <input class="form-control" name="attendance" placeholder="Attendance %" type="number" required>
+    </div>
+    <div class="col-md-2">
+        <input class="form-control" name="prior_grade" placeholder="Prior Grade" type="number" required>
+    </div>
+    <div class="col-md-1">
+        <input class="form-control" name="family_support" placeholder="Family Support (Yes/No)" required>
+    </div>
+    <div class="col-md-1">
+        <input class="form-control" name="extracurricular" placeholder="Extracurricular (Yes/No)" required>
+    </div>
+    <div class="col-md-1">
+        <button class="btn btn-primary w-100" type="submit">Predict</button>
+    </div>
+</form>
+
+{% if result %}
+<div class="alert alert-success mt-3">{{ result }}</div>
+{% endif %}
+{% endblock %}

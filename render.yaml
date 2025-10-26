@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: student-performance-app
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+      python src/train_model.py
+    startCommand: python app.py
+    envVars:
+      - key: PORT
+        value: 10000

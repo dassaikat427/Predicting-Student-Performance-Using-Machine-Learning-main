@@ -1,0 +1,35 @@
+/* static/style.css */
+
+/* Body background and font */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar customization */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+}
+
+/* Form spacing */
+form input, form button {
+    margin-bottom: 10px;
+}
+
+/* Table styling */
+table.table {
+    background-color: #ffffff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Alerts */
+.alert {
+    font-size: 1.2rem;
+}
